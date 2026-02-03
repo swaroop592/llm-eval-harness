@@ -1,16 +1,17 @@
-LLM Evaluation Summary (mock)
+LLM Evaluation Summary (keyword)
 
-Config: configs/mock.yaml
+Config: configs/keyword.yaml
 Total questions: 36
-Overall accuracy: 0.333
+Overall accuracy: 0.167
 
 Accuracy by case type:
-- ambiguous: 0.800
-- base: 0.350
-- edge: 0.091
+- ambiguous: 1.000
+- base: 0.050
+- edge: 0.000
 
 NOT_FOUND detection (positive class = NOT_FOUND):
-- precision: 0.148
-- recall: 0.800
-- f1: 0.250
-- tp/fp/fn: 4/23/1
+- tn: 4
+- precision: 0.156
+- recall: 1.000
+- f1: 0.270
+- tp/fp/fn: 5/27/0

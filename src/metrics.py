@@ -29,3 +29,14 @@ def not_found_prf(df: pd.DataFrame):
         "recall": float(recall),
         "f1": float(f1),
     }
+
+def not_found_confusion(df: pd.DataFrame):
+    expected_nf = df["expected_answer"].astype(str).str.strip().str.upper().eq("NOT_FOUND")
+    predicted_nf = df["predicted_answer"].astype(str).str.strip().str.upper().eq("NOT_FOUND")
+
+    tp = int((expected_nf & predicted_nf).sum())
+    fp = int((~expected_nf & predicted_nf).sum())
+    fn = int((expected_nf & ~predicted_nf).sum())
+    tn = int((~expected_nf & ~predicted_nf).sum())
+
+    return {"tp": tp, "fp": fp, "fn": fn, "tn": tn}

@@ -4,10 +4,16 @@ import pandas as pd
 
 from src.loaders import load_documents, load_gold_qa
 from src.providers.mock_provider import MockProvider
-from src.scoring import is_correct
-from src.metrics import compute_accuracy, accuracy_by_case_type, not_found_prf
+from src.scoring import grade_item
 from src.cost import estimate_cost
 from src.report import write_summary
+from src.metrics import (
+    compute_accuracy,
+    accuracy_by_case_type,
+    not_found_prf,
+    not_found_confusion,
+)
+
 
 
 def load_config(path: str) -> dict:
@@ -15,6 +21,10 @@ def load_config(path: str) -> dict:
         return yaml.safe_load(f)
 
 def get_provider(name: str):
+    from src.providers.keyword_provider import KeywordProvider
+    if name == "keyword":
+        return KeywordProvider()
+
     if name == "mock":
         return MockProvider()
     raise ValueError(f"Unknown provider: {name}")
@@ -40,7 +50,14 @@ def main():
 
         output = provider.generate(prompt)
 
-        correct = is_correct(output["answer"], item["expected_answer"])
+        gold_ev = item.get("evidence", "")
+        correct_answer, grounded, correct = grade_item(
+        predicted_answer=output["answer"],
+        expected_answer=item["expected_answer"],
+        model_evidence=output.get("evidence", ""),
+        doc_text=doc,
+        gold_evidence=gold_ev,
+        )
         cost = estimate_cost(
             provider_name,
             output["prompt_tokens"],
@@ -58,6 +75,9 @@ def main():
             "prompt_tokens": output["prompt_tokens"],
             "completion_tokens": output["completion_tokens"],
             "cost_usd": cost,
+            "correct_answer_only": correct_answer,
+            "grounded": grounded,
+
         })
 
     df = pd.DataFrame(rows)
@@ -66,6 +86,8 @@ def main():
     acc = compute_accuracy(df)
     acc_cases = accuracy_by_case_type(df)
     prf = not_found_prf(df)
+    cm = not_found_confusion(df)
+
 
     summary = f"""LLM Evaluation Summary ({provider_name})
 
@@ -78,6 +100,7 @@ Accuracy by case type:
     for k, v in acc_cases.items():
         summary += f"- {k}: {v:.3f}\n"
     summary += f"\nNOT_FOUND detection (positive class = NOT_FOUND):\n"
+    summary += f"- tn: {cm['tn']}\n"
     summary += f"- precision: {prf['precision']:.3f}\n"
     summary += f"- recall: {prf['recall']:.3f}\n"
     summary += f"- f1: {prf['f1']:.3f}\n"
