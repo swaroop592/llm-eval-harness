@@ -1,0 +1,5 @@
+provider: mock
+docs_dir: data/docs
+qa_path: data/gold/qa_gold.jsonl
+results_path: results/results.csv
+summary_path: reports/summary.md
