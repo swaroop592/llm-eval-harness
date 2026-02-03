@@ -18,3 +18,7 @@ python -m src.run_eval --config configs/mock.yaml
 python -m src.make_manual_audit
 python -m src.failure_modes
 python -m src.analyze_manual_audit
+
+
+python -m src.run_eval --config configs/mock.yaml
+python -m src.run_eval --config configs/keyword.yaml
