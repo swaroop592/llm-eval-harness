@@ -1,5 +1,5 @@
 id,doc_id,case_type,expected_answer,predicted_answer,correct,latency_ms,prompt_tokens,completion_tokens,cost_usd,human_correct,notes
-q036,doc_008_incident_postmortem,edge,SRE.,NOT_FOUND,False,10.229110717773438,84,3,0.0,,
-q014,doc_003_leave_policy,edge,At least 2 weeks in advance.,NOT_FOUND,False,10.242462158203123,99,3,0.0,,
-q027,doc_007_api_rate_limits,edge,No more than 5 times.,NOT_FOUND,False,10.413408279418944,90,3,0.0,,
-q031,doc_001_refund_policy,ambiguous,NOT_FOUND,NOT_FOUND,True,10.347843170166016,122,3,0.0,,
+q036,doc_008_incident_postmortem,edge,SRE.,NOT_FOUND,FALSE,10.229110717773438,84,3,0,FALSE,
+q014,doc_003_leave_policy,edge,At least 2 weeks in advance.,NOT_FOUND,FALSE,10.242462158203123,99,3,0,FALSE,
+q027,doc_007_api_rate_limits,edge,No more than 5 times.,NOT_FOUND,FALSE,10.413408279418944,90,3,0,FALSE,
+q031,doc_001_refund_policy,ambiguous,NOT_FOUND,NOT_FOUND,TRUE,10.347843170166016,122,3,0,TRUE,
