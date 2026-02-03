@@ -1,0 +1,18 @@
+PRICING PLANS — ACME AI TOOLS
+
+Starter
+- $20/month
+- Includes 100,000 tokens/day
+- Email support only
+
+Pro
+- $60/month
+- Includes 500,000 tokens/day
+- Email + chat support
+- 2 team seats included; extra seats cost $10/seat/month
+
+Enterprise
+- Custom pricing
+- Unlimited tokens (fair use)
+- Dedicated account manager
+- SLA included

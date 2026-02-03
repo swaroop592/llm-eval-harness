@@ -1,0 +1,17 @@
+API RATE LIMITS — PUBLIC API
+
+Default Limits
+- 60 requests per minute per API key
+- 10 concurrent requests per API key
+
+Burst Limits
+- Bursts up to 120 requests per minute are allowed for up to 30 seconds.
+
+HTTP Status Codes
+- 429: rate limit exceeded
+- 403: key disabled
+- 401: unauthorized
+
+Retry Guidance
+- Use exponential backoff starting at 1 second.
+- Do not retry more than 5 times for the same request.

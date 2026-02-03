@@ -1,0 +1,24 @@
+SERVICE LEVEL AGREEMENT (SLA) — ACME CLOUD
+Revision: 3.0
+
+Availability
+- Monthly uptime target: 99.9%
+- Uptime excludes scheduled maintenance and force majeure events.
+
+Maintenance
+- Scheduled maintenance occurs on Sundays 01:00–03:00 UTC.
+- Customers are notified at least 48 hours in advance.
+
+Service Credits
+- If uptime < 99.9% and >= 99.0%: 10% monthly credit
+- If uptime < 99.0% and >= 98.0%: 25% monthly credit
+- If uptime < 98.0%: 50% monthly credit
+
+Claim Window
+- Credit claims must be submitted within 14 days of the end of the affected month.
+- Claims must include incident timestamps and affected region.
+
+Support Response
+- Severity 1: response within 1 hour
+- Severity 2: response within 4 hours
+- Severity 3: response within 1 business day

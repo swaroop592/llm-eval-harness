@@ -1,0 +1,18 @@
+INCIDENT POSTMORTEM — 2025-11-14
+
+Summary
+- Duration: 47 minutes
+- Impact: 12% of requests failed in region us-west
+
+Timeline
+- 10:05 UTC: Error rate spikes detected
+- 10:12 UTC: On-call engaged
+- 10:23 UTC: Mitigation applied
+- 10:52 UTC: Service restored
+
+Root Cause
+- Misconfigured cache eviction policy caused cascading timeouts.
+
+Corrective Actions
+- Add rate-limit protection to cache invalidations (Owner: DevOps, Due: 2025-12-01)
+- Update runbook with new alert thresholds (Owner: SRE, Due: 2025-11-30)

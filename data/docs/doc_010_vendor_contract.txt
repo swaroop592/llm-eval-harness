@@ -1,0 +1,17 @@
+VENDOR CONTRACT — ACME x DATASTREAM LTD
+
+Term
+- Start: 2025-01-01
+- End: 2025-12-31
+- Auto-renewal: 12 months unless canceled with 60 days notice before end date.
+
+Payment
+- $8,000/month invoiced monthly.
+- Late payments incur 1.5% interest per month.
+
+Confidentiality
+- Confidential information must be protected for 3 years after contract termination.
+
+Termination
+- Either party may terminate for material breach with 30 days written notice to cure.
+- Immediate termination allowed for willful misconduct.

@@ -1,0 +1,15 @@
+NEW HIRE ONBOARDING CHECKLIST
+
+Day 1
+- Create accounts: Email, GitHub, Jira.
+- Complete security training within 24 hours.
+- Set up development environment.
+
+Week 1
+- Read engineering handbook sections 1–3.
+- Pair programming: at least 4 hours with a buddy.
+- Make one small pull request.
+
+Week 2
+- Join on-call shadowing session.
+- Attend architecture overview meeting (Thursday 10:00 AM).

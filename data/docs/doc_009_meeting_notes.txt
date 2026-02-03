@@ -1,0 +1,14 @@
+MEETING NOTES — PRODUCT SYNC (2025-10-03)
+
+Attendees: PM, Eng Lead, QA
+Decisions
+- Launch date moved from Oct 15 to Oct 22.
+- Must support CSV export at launch.
+
+Open Questions
+- Should we allow bulk upload limits above 5,000 rows?
+- Who owns data validation rules for international addresses?
+
+Action Items
+- PM to confirm compliance requirements by Oct 7.
+- Eng to estimate CSV export work by Oct 5.

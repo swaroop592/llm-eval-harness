@@ -1,0 +1,18 @@
+SECURITY POLICY — ACME INTERNAL
+
+Access Control
+- Production access requires MFA and is granted on a least-privilege basis.
+- Privileged access is reviewed quarterly.
+
+Data Handling
+- Customer PII must be encrypted at rest and in transit.
+- Logs containing PII must be retained for no more than 30 days.
+
+Incident Reporting
+- Security incidents must be reported within 30 minutes of detection.
+- A post-incident review must be completed within 5 business days.
+
+Passwords
+- Minimum length: 12 characters.
+- Must include upper, lower, number, and symbol.
+- Password reuse is prohibited for the last 5 passwords.

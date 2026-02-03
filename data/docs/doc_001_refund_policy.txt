@@ -1,0 +1,18 @@
+ACME REFUND POLICY v1.2
+Effective date: 2025-09-01
+
+1. Eligibility
+- Customers may request a refund within 30 days of purchase.
+- Refunds are not available for services that have been fully used.
+
+2. Refund Amount
+- If a refund is approved within 7 days of purchase, customers receive 100%.
+- If approved between 8–30 days, customers receive 70%.
+- After 30 days, refunds are denied.
+
+3. Exceptions
+- Annual plans are refundable only if no more than 2 support tickets were opened.
+- Promotional purchases marked FINAL SALE are not refundable.
+
+4. Processing Time
+- Refunds are processed within 5–10 business days after approval.
